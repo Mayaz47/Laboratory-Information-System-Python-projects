@@ -21,7 +21,7 @@ tempFile = os.path.join(folder_path, "temp.txt")
 def start_server():
     host = '192.168.20.155'
     port = 5000
-    url = 'https://erp.thelabquest.com/api/parametersaved'
+    url = ''
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind((host, port))
         s.listen(5)
