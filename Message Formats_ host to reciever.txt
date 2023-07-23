@@ -1,0 +1,57 @@
+Message Formats of all different machines
+
+
+Medonic M50
+
+HL7 Message Format Example:
+
+PV1||I|^3A^10 OBR|1||||||20120912194737| OBX|1|CWE|202886^^MDC||202902^MDC_EVT_STAT_RUNNING^MDC|262656^^MDC| OBX|2|CWE|30002^^99MNDRY||30003^MNDRY_EVT_STAT_MODE_NORMAL^99MNDRY|262656^^MDC| OBX|3|CWE|30005^^99MNDRY||202888^MDC_EVT_STAT_DEV_MODE_PEDIATRIC^MDC|262656^^MDC| OBX|4|CWE|30007^^99MNDRY||30000^MDC_TRUE^99MNDRY|262656^^MDC| OBX|5|CWE|184352^^MDC||50005^MNDRY_VENT_MODE_VCV^99MNDRY|262656^^MDC| OBX|6|NM|20015^^99MNDRY||300|263762^^MDC| OBX|7|NM|20016^^99MNDRY||20|264928^^MDC| OBX|8|SN|20000^^99MNDRY||^1^:^2|262656^^MDC| OBX|9|NM|20007^^99MNDRY||0|262688^^MDC| OBX|10|NM|20017^^99MNDRY||0|266048^^MDC| OBX|11|NM|20013^^99MNDRY||45|266048^^MDC| OBX|12|NM|113^^99MNDRY||3.7|265216^^MDC| OBX|13|NM|114^^99MNDRY||0.00|265216^^MDC|
+
+
+SYSMEX Hamatology Analyzer
+
+ASTM message Example:
+
+ENQ
+
+ENQ
+->ACK
+STX 1H|^&|||Sender|||||Receiver||P|1|DateandTimeofMessageYYYYMMD DHHMMSS CR ETX XX CR LF
+->ACK
+STX 2P|1|PracticeAssignedPatientID|||LastName^FirstName^MiddleNam e^Suffix^Title||BirthDateYYYYMMDD|PatientSex||AttendingPhysicianID CR ETX XX CR LF
+->ACK
+STX 3O|1|SpecimenID||^^^TestOrder^^^TestOrder^^^TestOrder|Prior ity||||||ActionCode||||SpecimenDescriptor CR ETX XX CR LF
+->ACK
+STX 4L|1|TerminationCode CR ETX XX CR LF
+->ACK
+EOT
+
+
+
+ACCESS 2 Immunoassay System
+
+ASTM message format
+
+
+
+AU480 Clinical Chemistry Analyzer
+
+Unique Message format Example:
+
+ETX RB STX
+ACK
+
+ETX DB STX
+ACK
+STX R_0001___________Barcode ETX
+ACK
+
+STX S_001____________Barcode___PatientInfo____TestCodes ETX
+<-Ack
+STX D_001____________Barcode_Test00000Result ETX
+ETX RE STX
+ETX DE STX
+
+
+
+
