@@ -16,7 +16,7 @@ try:
     baud_rate = 9600
     print('Port:', port)
     print('BaudRate:', baud_rate)
-    url = 'https://erp.thelabquest.com/api/parametersaved'
+    url = ''
     
         # Use the values in your code as necessary
     root = tk.Tk()
