@@ -31,7 +31,7 @@ try:
         text_area.insert(tk.END,"Connected"+'\n')
         
         # API to post data
-        url = 'https://erp.thelabquest.com/api/parametersaved'
+        url = ''
         while True:
                 size = z1serial.inWaiting() #Calculate size of incoming data
                 if size:
@@ -53,7 +53,7 @@ try:
                             bar = value2[2] #Second element of element list is the barcode
                             #rack=value2[1]
                             print(bar[:-1])
-                            url2 = "https://erp.thelabquest.com/api/parameter/"+bar[:-1]+"/2" 
+                            url2 = ""+bar[:-1]+"/2" 
                             response = requests.get(url2) #Getting test information from the API corresponding to the bar code
             
                             if response.status_code == 200: # Success status
